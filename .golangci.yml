@@ -1,0 +1,35 @@
+linters-settings:
+  gocritic:
+    enabled: true
+  golint:
+    enabled: true
+  govet:
+    enabled: true
+  staticcheck:
+    enabled: true
+  unused:
+    enabled: true
+  deadcode:
+    enabled: true
+
+linters:
+  enable:
+    - gocritic
+    - golint
+    - govet
+    - staticcheck
+    - unused
+    - deadcode
+  disable:
+    - gomnd
+    - interfacer
+    - goimports
+  skip-dirs:
+    - vendor
+    - thirdparty
+    - .git
+    - .svn
+
+run:
+  timeout: 2m
+  tests: true
